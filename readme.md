@@ -10,6 +10,7 @@ drag these ts files into your assets/ in cocos creator or other ts project.
 
 
 ## Usage
+In my project, I packed those apis first,
 ```typescript
 import nano from "./nano/nano";
 
@@ -53,6 +54,12 @@ export default class Server {
     }
 }
 ```
+and then :
+```typescript
+Server.request("relation.list",{},(response)=>{
+    console.log(response);
+})
+```
 
 ## Comments
 Due to nano needed to emmit events, so i extended nano with cc.EventTarget.
@@ -65,6 +72,7 @@ All is good for now.
 * [x] handshake
 * [x] send request via json 
 * [x] response
+* [x] no idea.....
 
 ## Issues
 Any issues and pr's are welcomed.
