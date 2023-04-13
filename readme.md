@@ -6,10 +6,11 @@ generally it would be doing great in other js/ts project.
 no dependecies required.
 
 ## Integrated into cocos creator
-just download these ts files and then drag into your assets/ in cocos creator.
+drag these ts files into your assets/ in cocos creator or other ts project.
 
 
 ## Usage
+```typescript
 import nano from "./nano/nano";
 
 
@@ -51,6 +52,7 @@ export default class Server {
         Server.s.disconnect();
     }
 }
+```
 
 ## Comments
 Due to nano needed to emmit events, so i extended nano with cc.EventTarget.
