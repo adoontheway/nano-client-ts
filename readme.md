@@ -62,8 +62,7 @@ All is good for now.
 * [x] connect
 * [x] handshake
 * [x] send request via json 
-
+* [x] response
 
 ## Issues
 Any issues and pr's are welcomed.
-* [x] response
