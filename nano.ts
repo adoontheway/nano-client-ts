@@ -361,7 +361,7 @@ export default class nano extends cc.EventTarget {
 
   }
 
-  processMessageBatch(nano, msgs) {
+  processMessageBatch(msgs) {
     for (var i = 0, l = msgs.length; i < l; i++) {
       this.processMessage(msgs[i]);
     }
