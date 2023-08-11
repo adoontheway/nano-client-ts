@@ -320,7 +320,7 @@ export default class nano extends cc.EventTarget {
     if (this.decode) {
       msg = this.decode(msg);
     }
-    this.processMessage(nano, msg);
+    this.processMessage(msg);
   }
 
   onKick(data) {
@@ -342,10 +342,10 @@ export default class nano extends cc.EventTarget {
     }
   }
 
-  processMessage(nano, msg) {
+  processMessage(msg) {
     if (!msg.id) {
       // server push message
-      nano.emit(msg.route, msg.body);
+      this.emit(msg.route, msg.body);
       return;
     }
 
@@ -361,9 +361,9 @@ export default class nano extends cc.EventTarget {
 
   }
 
-  processMessageBatch(nano, msgs) {
+  processMessageBatch(msgs) {
     for (var i = 0, l = msgs.length; i < l; i++) {
-      this.processMessage(nano, msgs[i]);
+      this.processMessage(msgs[i]);
     }
   }
 
